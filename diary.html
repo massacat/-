@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>مذكرتي - الفتاة المسلمة</title>
+    <meta name="description" content="ركن مذكرتي لتدوين الأفكار والملاحظات واليوميات بتصميم بسيط وجميل.">
+    <meta name="keywords" content="مذكرات, يوميات, تدوين, الفتاة المسلمة, ملاحظات, كتابة">
+    <meta name="author" content="الفتاة المسلمة">
+    <meta http-equiv="Content-Language" content="ar">
+  
+  
+  
+  <link rel="stylesheet" href="diary.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+  <div class="container">
+    <h1>مذكرتي</h1>
+    
+    <div class="note-header">
+      <input type="date" id="note-date">
+      <input type="text" id="note-title" placeholder="عنوان المذكرة">
+    </div>
+
+    <textarea id="note-content" placeholder="اكتبي مذكرتك هنا..."></textarea>
+
+    <div class="buttons">
+      <button id="save-btn"><i class="fas fa-save"></i> حفظ</button>
+      <button id="new-note-btn"><i class="fas fa-plus"></i> مذكرة جديدة</button>
+      <button id="delete-btn"><i class="fas fa-trash"></i> حذف</button>
+      <a href="index.html" class="home-btn"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
+    </div>
+    
+
+    <div class="note-list" id="note-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    let notes = JSON.parse(localStorage.getItem("notes") || "[]");
+let currentNoteIndex = null;
+
+const dateInput = document.getElementById("note-date");
+const titleInput = document.getElementById("note-title");
+const contentInput = document.getElementById("note-content");
+const saveBtn = document.getElementById("save-btn");
+const newNoteBtn = document.getElementById("new-note-btn");
+const deleteBtn = document.getElementById("delete-btn");
+const noteList = document.getElementById("note-list");
+
+// تحميل الملاحظات عند البداية
+renderNotes();
+
+// عند الضغط على زر الحفظ
+saveBtn.onclick = () => {
+  const note = {
+    date: dateInput.value,
+    title: titleInput.value,
+    content: contentInput.value
+  };
+
+  if (currentNoteIndex !== null) {
+    notes[currentNoteIndex] = note;
+  } else {
+    notes.push(note);
+  }
+
+  localStorage.setItem("notes", JSON.stringify(notes));
+  renderNotes();
+  alert("تم حفظ المذكرة ✅");
+};
+
+// زر إضافة مذكرة جديدة
+newNoteBtn.onclick = () => {
+  currentNoteIndex = null;
+  dateInput.value = new Date().toISOString().split("T")[0];
+  titleInput.value = "";
+  contentInput.value = "";
+};
+
+// زر حذف المذكرة
+deleteBtn.onclick = () => {
+  if (currentNoteIndex !== null) {
+    notes.splice(currentNoteIndex, 1);
+    localStorage.setItem("notes", JSON.stringify(notes));
+    renderNotes();
+    currentNoteIndex = null;
+    dateInput.value = "";
+    titleInput.value = "";
+    contentInput.value = "";
+    alert("تم حذف المذكرة 🗑️");
+  }
+};
+
+// عرض قائمة الملاحظات
+function renderNotes() {
+  noteList.innerHTML = "";
+  notes.forEach((note, index) => {
+    const div = document.createElement("div");
+    div.className = "note-item";
+    div.textContent = `${note.date} - ${note.title || "بدون عنوان"}`;
+    div.onclick = () => loadNote(index);
+    noteList.appendChild(div);
+  });
+}
+
+// تحميل المذكرة
+function loadNote(index) {
+  const note = notes[index];
+  dateInput.value = note.date;
+  titleInput.value = note.title;
+  contentInput.value = note.content;
+  currentNoteIndex = index;
+}
+
+  </script>
+</body>
+</html>
+

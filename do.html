@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>قائمة المهام - الفتاة المسلمة</title>
+    <meta name="description" content="قائمة مهامي اليومية لتنظيم الوقت وزيادة الإنتاجية، بطريقة سهلة وجذابة.">
+    <meta name="keywords" content="قائمة المهام, تنظيم الوقت, إنتاجية, الفتاة المسلمة, مهام يومية">
+    <meta name="author" content="الفتاة المسلمة">
+    <meta http-equiv="Content-Language" content="ar">
+  
+  
+  
+  <link rel="stylesheet" href="do.css">
+  <!-- خط Cairo من Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <!-- أيقونات Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>قائمة المهام</h1>
+
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="أضف مهمة جديدة">
+      <button onclick="addTask()" class="btn-add"><i class="fas fa-plus"></i> إضافة</button>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+
+    <a href="index.html" class="home-button">
+      <i class="fas fa-house"></i> الصفحة الرئيسية
+    </a>
+  </div>
+
+  <script>
+    function addTask() {
+      const input = document.getElementById("taskInput");
+      const taskText = input.value.trim();
+      if (taskText === "") return;
+
+      const li = document.createElement("li");
+      li.className = "task-item";
+      li.innerHTML = `
+        <span>${taskText}</span>
+        <button class="delete-btn" onclick="this.parentElement.remove()">
+          <i class="fas fa-xmark"></i>
+        </button>
+      `;
+      document.getElementById("taskList").appendChild(li);
+      input.value = "";
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+

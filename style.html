@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>يومياتي</title>
+
+  <!-- خط Cairo -->
+  <link rel="stylesheet" href="style1.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <!-- أيقونات Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      background-image: url('douaa.jpg'); /* ضعي صورة خلفية ناعمة هنا */
+      background-size: cover ;
+      background-position: center;
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 36px;
+      color: #d63384;
+      text-shadow: 1px 1px #fff;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .button-container button {
+      padding: 15px 35px;
+      margin: 15px;
+      font-size: 18px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      background-color: #ffc1cc;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .button-container button:hover {
+      background-color: #ce9db8;
+      transform: scale(1.05);
+    }
+
+    .button-container button i {
+      margin-left: 10px;
+    }
+
+    .back-button {
+      display: block;
+      text-align: center;
+      margin: 40px auto 20px;
+      padding: 10px 20px;
+      background-color: #fc7f94;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      width: fit-content;
+    }
+
+    .back-button:hover {
+      background-color: #f7a4a4;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <h1>يومياتي</h1>
+
+  <div class="button-container">
+    <button onclick="window.location.href='do.html'">
+      <i class="fas fa-tasks"></i> قائمة المهام
+    </button>
+
+    <button onclick="window.location.href='diary.html'">
+      <i class="fas fa-book"></i> مذكرتي
+    </button>
+
+    <button onclick="window.location.href='note.html'">
+      <i class="fas fa-calendar"></i> تنبيهات
+    </button>
+  </div>
+
+  <a href="index.html" class="back-button"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
+
+</body>
+</html>
+

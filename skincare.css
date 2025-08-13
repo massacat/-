@@ -1,0 +1,70 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background-image: url('douaa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  h1 {
+    color: #d63384;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 15px;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .pretty-button {
+    font-family: 'Cairo', sans-serif;
+    padding: 15px 40px;
+    margin: 15px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffc1cc;
+    color: #ffffff;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .pretty-button:hover {
+    transform: scale(1.05);
+    background-color: #ff9aad;
+  }
+  
+  .pretty-button i {
+    margin-left: 8px;
+  }
+  
+  /* زر العودة */
+  .back-button {
+    display: block;
+    text-align: center;
+    margin: 40px auto 20px;
+    padding: 10px 20px;
+    background-color: #fc7f94;
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: fit-content;
+  }
+  
+  .back-button:hover {
+    background-color: #faaab4;
+  }
+  
+  .back-button i {
+    margin-left: 6px;
+  }
+  

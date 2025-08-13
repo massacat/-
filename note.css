@@ -1,0 +1,101 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background-image: url("douaa.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 40px;
+    color: #5f375f;
+  }
+  
+  .container {
+    background-color: #ffffffcc;
+    border-radius: 25px;
+    box-shadow: 0 0 15px #ffc0cb80;
+    padding: 30px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #c71585;
+  }
+  
+  input, button {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    font-size: 16px;
+    width: 90%;
+    border: 2px solid #ffc0cb;
+    border-radius: 12px;
+    background-color: #fff0f5;
+  }
+  
+  button {
+    background-color: #ffb6c1;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff69b4;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: #ffe4e1;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  li span {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .delete-btn {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
+  
+  .delete-btn i {
+    pointer-events: none;
+  }
+  
+  .home-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #d8bfd8;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #4b004b;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .home-button:hover {
+    background-color: #dda0dd;
+  }
+  
+  
+  

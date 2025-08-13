@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+/* خلفية الصفحة */
+body {
+  background-image: url('background.jpg'); /* ضعي اسم الصورة الجديدة هنا */
+  background-size: cover;
+  background-position: center;
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* تنسيق حاوية الأزرار */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+/* تصميم الأزرار */
+.button-container button {
+  font-family: 'Cairo', sans-serif;
+  background-color: #ffc1cc; /* وردي فاتح */
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 18px;
+  border-radius: 15px;
+  margin: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* تأثير التمرير */
+.button-container button:hover {
+  background-color: #f7a4a4; /* وردي أغمق */
+}

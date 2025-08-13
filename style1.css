@@ -1,0 +1,41 @@
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+  }
+  
+  .button-container button {
+    padding: 12px 30px;
+    margin: 15px;
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffc1cc;
+    color: #fff;
+    font-family: 'Cairo', sans-serif;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .button-container button:hover {
+    background-color: #f8c2e0;
+  }
+  button {
+    font-family: 'Cairo', sans-serif;
+    background-color: #ffc1cc; /* وردي فاتح */
+    color: #fff; /* لون النص أبيض */
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  button:hover {
+    background-color: #f7a4a4; /* وردي أغمق عند التمرير */
+  }
+  

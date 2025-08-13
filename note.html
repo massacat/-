@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>التنبيهات - الفتاة المسلمة</title>
+    <meta name="description" content="صفحة التنبيهات لتذكيرك بالمواعيد المهمة والأنشطة اليومية بأسلوب بسيط وفعال.">
+    <meta name="keywords" content="تنبيهات, تذكير, تنظيم الوقت, الفتاة المسلمة, مواعيد">
+    <meta name="author" content="الفتاة المسلمة">
+    <meta http-equiv="Content-Language" content="ar">
+  
+  
+  
+
+  <!-- خط Cairo -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome للأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ملف CSS -->
+  <link rel="stylesheet" href="note.css">
+</head>
+<body>
+  <div class="container">
+    <h1><i class="fas fa-bell"></i> منبه المهام اليومية</h1>
+
+    <input type="text" id="alertTitle" placeholder="عنوان التنبيه">
+    <input type="date" id="alertDate">
+    <input type="time" id="alertTime">
+
+    <button onclick="addAlarm()">
+      <i class="fas fa-plus"></i> إضافة تنبيه
+    </button>
+
+    <ul id="alarmList"></ul>
+
+    <a href="index.html" class="home-button">
+      <i class="fas fa-arrow-right"></i> العودة للرئيسية
+    </a>
+  </div>
+
+  <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+  <script>
+    let alarms = [];
+
+function addAlarm() {
+  const title = document.getElementById('alertTitle').value;
+  const date = document.getElementById('alertDate').value;
+  const time = document.getElementById('alertTime').value;
+
+  if (!title || !date || !time) {
+    alert("رجاءً املئي كل الخانات");
+    return;
+  }
+
+  alarms.push({ title, date, time, triggered: false });
+  displayAlarms();
+}
+
+function displayAlarms() {
+  const list = document.getElementById('alarmList');
+  list.innerHTML = '';
+
+  alarms.forEach((alarm, index) => {
+    const li = document.createElement('li');
+
+    const span = document.createElement('span');
+    span.textContent = `${alarm.title} - ${alarm.date} ${alarm.time}`;
+
+    const delBtn = document.createElement('button');
+    delBtn.classList.add('delete-btn');
+    delBtn.innerHTML = '<i class="fas fa-times"></i>';
+    delBtn.onclick = () => deleteAlarm(index);
+
+    li.appendChild(span);
+    li.appendChild(delBtn);
+    list.appendChild(li);
+  });
+}
+
+function deleteAlarm(index) {
+  alarms.splice(index, 1);
+  displayAlarms();
+}
+
+function checkAlarms() {
+  const now = new Date();
+  const currentDate = now.toISOString().slice(0, 10); // yyyy-mm-dd
+  const currentTime = now.toTimeString().slice(0, 5); // hh:mm
+
+  alarms.forEach(alarm => {
+    if (alarm.date === currentDate && alarm.time === currentTime && !alarm.triggered) {
+      alarm.triggered = true;
+      document.getElementById("alarmSound").play();
+      alert("⏰ حان الوقت: " + alarm.title);
+    }
+  });
+}
+
+setInterval(checkAlarms, 1000);
+
+  </script>
+</body>
+</html>
+
+

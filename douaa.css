@@ -1,0 +1,80 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  background-image: url('douaa.jpg'); /* خلفية douaa */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 20px;
+  direction: rtl;
+  color: #000;
+}
+
+/* العنوان في المنتصف دائماً */
+.page-title {
+  display: block;
+  text-align: center;
+  font-size: 2.2em;
+  color: #d63384;
+  margin: 0 auto 30px auto;
+  padding: 10px 20px;
+  border-radius: 15px;
+  
+  width: fit-content; /* عرض على قد النص */
+}
+
+/* الصناديق أصغر */
+.zekr {
+  border: 2px solid #f5a3c7;
+  background-color: #fff7fa; /* خلفية ناعمة أنثوية */
+  padding: 15px;
+  margin: 15px auto;
+  width: 60%; /* بدل 80% */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(252, 180, 220, 0.6);
+  text-align: right;
+  font-size: 17px; /* حجم خط أصغر قليلاً */
+  line-height: 1.8;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.zekr:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(252, 180, 220, 0.8);
+}
+
+.zekr h4 {
+  color: #d63384;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.zekr p {
+  color: #333;
+}
+
+.back-button {
+  display: block;
+  text-align: center;
+  margin: 40px auto 20px;
+  padding: 12px 25px;
+  background-color: #fc7f94;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, transform 0.2s;
+  width: fit-content;
+}
+
+.back-button:hover {
+  background-color: #faaab4;
+  transform: scale(1.05);
+}
+
+.back-button i {
+  margin-left: 8px;
+}

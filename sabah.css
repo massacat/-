@@ -1,0 +1,104 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  background: url('douaa.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  color: #d81b60;
+  margin-bottom: 20px;
+}
+
+.azkar-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.azkar-card:hover {
+  transform: translateY(-4px);
+}
+
+.azkar-card p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.btn {
+  font-family: 'Cairo', sans-serif;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.done {
+  background-color: #f48fb1;
+  color: white;
+}
+
+.repeat {
+  background-color: #ec407a;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.back-btn {
+  display: block;
+  text-align: center;
+  margin: 30px auto 0;
+  width: fit-content;
+  padding: 10px 25px;
+  background-color: #f06292;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #ec407a;
+}
+
+/* جعل التصميم متجاوب */
+@media (max-width: 600px) {
+  .azkar-card p {
+    font-size: 16px;
+  }
+  .page-title {
+    font-size: 22px;
+  }
+}
