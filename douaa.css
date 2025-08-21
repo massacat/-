@@ -37,6 +37,7 @@ body {
   font-size: 17px; /* حجم خط أصغر قليلاً */
   line-height: 1.8;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: bold;
 }
 
 .zekr:hover {
