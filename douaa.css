@@ -1,5 +1,5 @@
 body {
-  font-family: 'Cairo', sans-serif;
+    font-family: 'Noto Naskh Arabic', serif;
   background-image: url('douaa.jpg'); /* خلفية douaa */
   background-size: cover;
   background-repeat: no-repeat;
@@ -8,7 +8,9 @@ body {
   margin: 0;
   padding: 20px;
   direction: rtl;
-  color: #000;
+  color: #333;
+              font-weight: 700; /* يخلي الخط عريض */
+
 }
 
 /* العنوان في المنتصف دائماً */
@@ -37,7 +39,6 @@ body {
   font-size: 17px; /* حجم خط أصغر قليلاً */
   line-height: 1.8;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-weight: bold;
 }
 
 .zekr:hover {
