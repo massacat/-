@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="أذكار المساء المأثورة عن النبي ﷺ، مع تكرار سهل وعد تنازلي لكل ذكر.">
-  <meta name="keywords" content="أذكار المساء, أدعية المساء, الفتاة المسلمة, ذكر الله, أدعية, إسلام">
-  <meta name="author" content="الفتاة المسلمة">
-  <meta http-equiv="Content-Language" content="ar">
-</head>
-
+<meta name="description" content="أذكار المساء المأثورة عن النبي ﷺ، مع تكرار سهل وعد تنازلي له كل ذكر.">
+<meta name="keywords" content="أذكار المساء, أدعية المساء, الفتاة المسلمة, ذكر الله, أدعية, إسلام">
+<meta name="author" content="الفتاة المسلمة">
+<meta http-equiv="Content-Language" content="ar">
 <title>أذكار المساء</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap" rel="stylesheet">
+
 <style>
   body {
     font-family: 'Noto Naskh Arabic', serif;
@@ -19,13 +19,15 @@
     margin: 0;
     padding: 0;
     text-align: center;
-            font-weight: 700; /* يخلي الخط عريض */
-
+    font-weight: 700;
   }
 
   h1 {
     color: #d63384;
     margin-top: 20px;
+    font-size: 42px; /* كبير وواضح */
+    font-weight: 800;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   }
 
   .zekr-container {
@@ -34,9 +36,8 @@
     align-items: center;
     gap: 15px;
     padding: 20px;
-    font-size: 1.3rem; /* حجم الخط أكبر قليلاً */
-}
-
+    font-size: 28px;
+  }
 
   .zekr-box {
     background-color: rgba(255, 255, 255, 0.85);
@@ -46,8 +47,7 @@
     max-width: 600px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     text-align: center;
-}
-
+  }
 
   .repeat-controls {
     margin-top: 10px;
@@ -99,6 +99,7 @@
 <body>
 
 <h1>أذكار المساء</h1>
+
 
 <div class="zekr-container">
 
@@ -332,9 +333,27 @@
       <button class="repeat-btn" onclick="repeatDhikr(this)">تكرار</button>
     </div>
   </div>
+ <div class="zekr-box">
+    <p>
+      لاَ إلَهَ إلاَّ اللهُ وحده لا شريك له’ له الملك و له الحمد و هو على كل شيء قدير
+    <br> 
+  <small style="display:block; margin-top:5px; color:#555; font-size:14px;">
+     فضلها: و كأنك حررت 4 رقاب عربية
+  </small>
+    </p>
+    <div class="repeat-controls">
+      <input type="number" value="10" min="1">
+      <button class="repeat-btn" onclick="repeatDhikr(this)">تكرار</button>
+    </div>
+  </div>
 
   <div class="zekr-box">
-    <p>سُبْحـانَ اللهِ وَبِحَمْـدِهِ.</p>
+    <p> سُبْحـانَ الله و بحمده
+      <br> 
+  <small style="display:block; margin-top:5px; color:#555; font-size:14px;">
+     فضلها: تُغفَر الذُّنـوبَ و لو كانت مثل زبد البحر
+  </small>
+    </p>
     <div class="repeat-controls">
       <input type="number" value="100" min="1">
       <button class="repeat-btn" onclick="repeatDhikr(this)">تكرار</button>

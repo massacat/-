@@ -23,6 +23,16 @@
         font-weight: 700; /* يخلي الخط عريض */
 
   }
+.zekr-box p,
+.zekr-box div,
+.zekr-box span {
+  font-weight: bold;
+  font-size: 30px; /* كبير ومناسب للقراءة بدون نظارات */
+  line-height: 2.2; /* تباعد مريح */
+  color: #000;
+  direction: rtl;
+  text-align: center;
+}
 
   h1 {
     color: #d63384;
@@ -48,7 +58,12 @@
 }
 .zekr-box p {
   font-weight: bold;
+  font-size: 30px; /* حجم كبير ومريح للقراءة */
+  line-height: 2; /* تباعد مريح بين السطور */
+  color: #000;
 }
+
+
 
 
   .repeat-controls {
@@ -96,6 +111,14 @@
   .home-btn:hover {
     background-color: #f2a9cc;
   }
+  /* تكبير خاص لآية الكرسي والمعوذات */
+.quran-text {
+  font-size: 36px !important; /* أكبر وواضح جدًا */
+  line-height: 2.5;
+  color: #000;
+  font-weight: bold;
+}
+
 </style>
 </head>
 <body>
@@ -225,7 +248,7 @@
   <div class="zekr-box">
     <p>سُبْحـانَ اللهِ وَبِحَمْـدِهِ عَدَدَ خَلْـقِه ، وَرِضـا نَفْسِـه ، وَزِنَـةَ عَـرْشِـه ، وَمِـدادَ كَلِمـاتِـه.</p>
     <div class="repeat-controls">
-      <input type="number" value="1" min="1">
+      <input type="number" value="3" min="1">
       <button class="repeat-btn" onclick="repeatDhikr(this)">تكرار</button>
     </div>
   </div>
@@ -330,9 +353,25 @@
       <button class="repeat-btn" onclick="repeatDhikr(this)">تكرار</button>
     </div>
   </div>
-
+<div class="zekr-box">
+    <p> سُبْحـانَ الله و بحمده
+      <br> 
+  <small style="display:block; margin-top:5px; color:#555; font-size:14px;">
+     فضلها: تُغفَر الذُّنـوبَ و لو كانت مثل زبد البحر
+  </small>
+    </p>
+    <div class="repeat-controls">
+      <input type="number" value="100" min="1">
+      <button class="repeat-btn" onclick="repeatDhikr(this)">تكرار</button>
+    </div>
+  </div>
   <div class="zekr-box">
-    <p> لاَ إلَهَ إلاّ الله وَحدَهُ لا شَريكَ له, له المُـلكُ و لهُ الحمد و هُوَ على كـلِّ شَيءٍ قدير</p>
+    <p> لاَ إلَهَ إلاّ الله وَحدَهُ لا شَريكَ له, له المُـلكُ و لهُ الحمد و هُوَ على كـلِّ شَيءٍ قدير
+      <br> 
+  <small style="display:block; margin-top:5px; color:#555; font-size:14px;">
+     فضلها:و كأنك حررت عشرة رقاب تضاف لك 100 حسنة و تمحى لك 100 سيئة و لا يأتي احد بمثلك الا رجل قال أكثر منك
+  </small>
+    </p>
     <div class="repeat-controls">
       <input type="number" value="100" min="1">
       <button class="repeat-btn" onclick="repeatDhikr(this)">تكرار</button>
