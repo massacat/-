@@ -6,7 +6,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   margin: 0;
-  padding: 20px;
+  padding: 30px;
   direction: rtl;
   color: #333;
               font-weight: 700; /* يخلي الخط عريض */
@@ -36,7 +36,8 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(252, 180, 220, 0.6);
   text-align: right;
-  font-size: 17px; /* حجم خط أصغر قليلاً */
+  font-size: 30px; /* حجم خط أصغر قليلاً */
+  font-weight: bold;
   line-height: 1.8;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -54,6 +55,7 @@ body {
 
 .zekr p {
   color: #333;
+  font-weight: bold;
 }
 
 .back-button {
